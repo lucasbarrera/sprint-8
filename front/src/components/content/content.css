@@ -1,0 +1,22 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+  height: 400px;
+  width: 800px;
+  margin: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.pagesButtons {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+
+.table {
+  width: 100%;
+}

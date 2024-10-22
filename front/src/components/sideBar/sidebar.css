@@ -1,0 +1,9 @@
+.containerSideBar {
+  border: solid 2px black;
+  height: 700px;
+  width: 200px;
+  background-color: #dfc8da;
+}
+.textSideBar {
+  font-size: 30px;
+}

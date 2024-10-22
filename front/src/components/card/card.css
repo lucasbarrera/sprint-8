@@ -1,0 +1,19 @@
+.card {
+  width: 25%;
+  background-color: #d9eca5;
+  border: 3px solid #4d533d;
+  box-shadow: 5px 5px 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.titleCard {
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.contentCard {
+  font-size: 15px;
+}

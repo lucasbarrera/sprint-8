@@ -1,0 +1,15 @@
+.containerSideBar {
+  position: relative;
+  top: 30px;
+}
+.cardContainer {
+  position: relative;
+  top: -700px;
+  left: 220px;
+}
+
+.contentContainer {
+  position: relative;
+  top: -700px;
+  left: 220px;
+}
