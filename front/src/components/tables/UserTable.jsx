@@ -1,7 +1,8 @@
 import { UseFetchUsers } from "../../hooks/UseFetchUsers";
 
 function UserTable() {
-  const { data } = UseFetchUsers();
+  const { data, nextPage, prevPage, totalPag, pageNum } = UseFetchUsers();
+
   return (
     <div>
       <table className="table">
@@ -25,6 +26,18 @@ function UserTable() {
             ))}
         </tbody>
       </table>
+      {totalPag >= 1 ? (
+        <div className="pagesButtons">
+          <button onClick={prevPage} disabled={pageNum == 1}>
+            anterior
+          </button>{" "}
+          <button onClick={nextPage} disabled={pageNum == totalPag}>
+            siguiente
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
