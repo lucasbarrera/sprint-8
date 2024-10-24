@@ -4,30 +4,40 @@ export const UseFetchUsers = () => {
   const [data, setData] = useState();
   const [pageNum, setPageNum] = useState(1);
   const [totalPag, setTotalPag] = useState(0);
-
   useEffect(() => {
-    fetch(`http://localhost:8080/users?page${pageNum}`)
-      .then((res) => res.json())
-      .then((dataParse) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:8080/users?page=${pageNum}`
+        );
+        const dataParse = await response.json();
+        console.log("Datos recibidos:", dataParse);
         setData(dataParse);
         setTotalPag(dataParse.totalPages);
-      });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
   }, [pageNum]);
 
-  //fetch y funciones de paginacion
-  useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const page = queryParams.get("page");
-    if (page) {
-      setPageNum(Number(page));
+  const nextPage = () => {
+    if (pageNum < totalPag) {
+      setPageNum(pageNum + 1);
     }
-  }, []);
-
-  const updateURL = (newPageNum) => {
-    const newUrl = `${window.location.pathname}?page=${newPageNum}`;
-    window.history.pushState(null, "", newUrl);
-    console.log(newPageNum);
+  };
+  const prevPage = () => {
+    if (pageNum > 1) {
+      setPageNum(pageNum - 1);
+    }
   };
 
-  return { data, pageNum, updateURL, totalPag, setPageNum };
+  return {
+    data,
+    pageNum,
+    totalPag,
+    setPageNum,
+    nextPage,
+    prevPage,
+  };
 };

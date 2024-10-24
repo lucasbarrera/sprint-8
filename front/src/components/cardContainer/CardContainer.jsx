@@ -5,11 +5,6 @@ import { useEffect, useState } from "react";
 export const CardContainer = () => {
   const [users, setUsers] = useState(0);
   const [products, setProducts] = useState(0);
-  // const [productMin, setProductMin] = useState({});
-
-  // useEffect(() => {
-  //   console.log("El producto más barato ha cambiado:", productMin);
-  // }, [productMin]);
 
   useEffect(() => {
     getDataUsers();
