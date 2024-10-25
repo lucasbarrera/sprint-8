@@ -1,7 +1,7 @@
 import { UseFetch } from "../../hooks/UseFetch";
 
-function UserTable() {
-  const { data, nextPage, prevPage, totalPag, pageNum } = UseFetch("users/");
+function ProductsTable() {
+  const { data, nextPage, prevPage, totalPag, pageNum } = UseFetch("products/");
 
   return (
     <div>
@@ -10,18 +10,22 @@ function UserTable() {
           <tr>
             <th scope="col">ID</th>
             <th scope="col">nombre</th>
-            <th scope="col">apellido</th>
-            <th scope="col">email</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">color</th>
+            <th scope="col">precio</th>
+            <th scope="col">id marca</th>
           </tr>
         </thead>
         <tbody>
           {data &&
-            data.users.map((user) => (
-              <tr key={user.id}>
-                <th scope="row">{user.id - 19}</th>
-                <td>{user.nombre}</td>
-                <td>{user.apellido}</td>
-                <td>{user.email}</td>
+            data.productos.map((producto) => (
+              <tr key={producto.id}>
+                <th scope="row">{producto.id}</th>
+                <td>{producto.nombre}</td>
+                <td>{producto.descripcion}</td>
+                <td>{producto.color}</td>
+                <td>{producto.precio}</td>
+                <td>{producto.id_marca}</td>
               </tr>
             ))}
         </tbody>
@@ -42,4 +46,4 @@ function UserTable() {
   );
 }
 
-export default UserTable;
+export default ProductsTable;

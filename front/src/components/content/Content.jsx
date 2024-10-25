@@ -3,6 +3,7 @@ import { List } from "../listButtons/List";
 import UserTable from "../tables/UserTable";
 import { useState } from "react";
 import BrandsTable from "../tables/BrandsTable";
+import ProductsTable from "../tables/ProductsTable";
 const Content = () => {
   const [numButton, setNumButton] = useState(1);
   // const { nextPage, prevPage, pageNum, totalPag } = ButtonsHook();
@@ -17,7 +18,7 @@ const Content = () => {
       case 2:
         return <BrandsTable />;
       case 3:
-        return;
+        return <ProductsTable />;
       default:
         break;
     }

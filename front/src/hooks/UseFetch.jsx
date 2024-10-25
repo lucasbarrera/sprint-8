@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
 
-export const UseFetchUsers = () => {
+export const UseFetch = (endpoint) => {
   const [data, setData] = useState();
   const [pageNum, setPageNum] = useState(1);
   const [totalPag, setTotalPag] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/users?page=${pageNum}`)
+    fetch(`http://localhost:8080/${endpoint}?page=${pageNum}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error en la respuesta de la API");
         }
-        return response.json(); // Parseamos la respuesta como JSON
+        return response.json();
       })
       .then((dataParse) => {
-        console.log("Datos recibidos:", dataParse);
-        // Verificamos que dataParse y totalPages existen antes de actualizar el estado
+        // console.log("Datos recibidos:", dataParse);
         if (dataParse && dataParse.totalPages !== undefined) {
-          setData(dataParse); // Actualizamos el estado con los datos
-          setTotalPag(dataParse.totalPages); // Actualizamos el total de páginas
+          setData(dataParse);
+          setTotalPag(dataParse.totalPages);
         } else {
           console.error("Estructura de datos incorrecta:", dataParse);
         }
@@ -26,7 +25,7 @@ export const UseFetchUsers = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [pageNum]);
+  }, [pageNum, endpoint]);
 
   const nextPage = () => {
     if (pageNum < totalPag) {

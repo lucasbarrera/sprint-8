@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 10dvh;
+  background-color: #e6f79b;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  img {
+    width: 80px;
+  }
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
