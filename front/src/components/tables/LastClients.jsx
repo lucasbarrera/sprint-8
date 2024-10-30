@@ -1,24 +1,27 @@
 import { UseFetch } from "../../hooks/UseFetch";
 
-function CategoriesTable() {
-  const { data, nextPage, prevPage, totalPag, pageNum } =
-    UseFetch("categorias/");
-
+function LastClients() {
+  const { data, totalPag, prevPage, nextPage, pageNum } =
+    UseFetch("users/lastclients");
   return (
-    <div>
+    <>
       <table className="table">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">nombre</th>
+            <th scope="col">apellido</th>
+            <th scope="col">email</th>
           </tr>
         </thead>
         <tbody>
           {data &&
-            data.categorias.map((cat) => (
-              <tr key={cat.id}>
-                <th scope="row">{cat.id}</th>
-                <td>{cat.categoria}</td>
+            data.users.map((user) => (
+              <tr key={user.id}>
+                <th scope="row">{user.id}</th>
+                <td>{user.nombre}</td>
+                <td>{user.apellido}</td>
+                <td>{user.email}</td>
               </tr>
             ))}
         </tbody>
@@ -31,7 +34,8 @@ function CategoriesTable() {
           siguiente
         </button>
       </div>
-    </div>
+    </>
   );
 }
-export default CategoriesTable;
+
+export default LastClients;

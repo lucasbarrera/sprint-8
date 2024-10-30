@@ -1,11 +1,10 @@
 import { UseFetch } from "../../hooks/UseFetch";
 
-function ProductsTable() {
-  const { data, nextPage, prevPage, totalPag, pageNum } =
-    UseFetch("productos/");
-
+function LastProducts() {
+  const { data, prevPage, nextPage, pageNum, totalPag } =
+    UseFetch("productos/lastadd");
   return (
-    <div>
+    <>
       <table className="table">
         <thead>
           <tr>
@@ -14,19 +13,21 @@ function ProductsTable() {
             <th scope="col">descripcion</th>
             <th scope="col">color</th>
             <th scope="col">precio</th>
-            <th scope="col">id marca</th>
+            <th scope="col">talle</th>
+            <th scope="col">marca</th>
           </tr>
         </thead>
         <tbody>
           {data &&
-            data.productos.map((producto) => (
-              <tr key={producto.id}>
-                <th scope="row">{producto.id}</th>
-                <td>{producto.nombre}</td>
-                <td>{producto.descripcion}</td>
-                <td>{producto.color}</td>
-                <td>{producto.precio}</td>
-                <td>{producto.id_marca}</td>
+            data.productos.map((p) => (
+              <tr key={p.id}>
+                <th scope="row">{p.id}</th>
+                <td>{p.nombre}</td>
+                <td>{p.descripcion}</td>
+                <td>{p.color}</td>
+                <td>{p.precio}</td>
+                <td>{p.talle.descripcion}</td>
+                <td>{p.marca.descripcion}</td>
               </tr>
             ))}
         </tbody>
@@ -39,8 +40,8 @@ function ProductsTable() {
           siguiente
         </button>
       </div>
-    </div>
+    </>
   );
 }
 
-export default ProductsTable;
+export default LastProducts;

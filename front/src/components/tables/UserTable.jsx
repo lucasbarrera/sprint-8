@@ -18,7 +18,7 @@ function UserTable() {
           {data &&
             data.users.map((user) => (
               <tr key={user.id}>
-                <th scope="row">{user.id - 19}</th>
+                <th scope="row">{user.id}</th>
                 <td>{user.nombre}</td>
                 <td>{user.apellido}</td>
                 <td>{user.email}</td>
