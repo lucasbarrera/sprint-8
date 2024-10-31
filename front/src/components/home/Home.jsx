@@ -3,6 +3,7 @@ import "./home.css";
 import { CardContainer } from "../cardContainer/CardContainer";
 import Header from "../header/Header";
 import Footer from "../Fotter/Footer";
+
 const Home = () => {
   return (
     <>

@@ -5,11 +5,11 @@ function BrandsTable() {
 
   return (
     <div>
-      <table className="table">
+      <table className="table brands">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">nombre</th>
+            <th scope="col">Nombre</th>
           </tr>
         </thead>
         <tbody>
@@ -25,10 +25,10 @@ function BrandsTable() {
       {totalPag >= 1 ? (
         <div className="pagesButtons">
           <button onClick={prevPage} disabled={pageNum == 1}>
-            anterior
+            Anterior
           </button>{" "}
           <button onClick={nextPage} disabled={pageNum == totalPag}>
-            siguiente
+            Siguiente
           </button>
         </div>
       ) : (

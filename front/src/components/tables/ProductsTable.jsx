@@ -5,15 +5,15 @@ function ProductsTable() {
 
   return (
     <div>
-      <table className="table">
+      <table className="table products">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">nombre</th>
-            <th scope="col">descripcion</th>
-            <th scope="col">color</th>
-            <th scope="col">precio</th>
-            <th scope="col">id marca</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Color</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Id_marca</th>
           </tr>
         </thead>
         <tbody>
@@ -33,10 +33,10 @@ function ProductsTable() {
       {totalPag >= 1 ? (
         <div className="pagesButtons">
           <button onClick={prevPage} disabled={pageNum == 1}>
-            anterior
+            Anterior
           </button>{" "}
           <button onClick={nextPage} disabled={pageNum == totalPag}>
-            siguiente
+            Siguiente
           </button>
         </div>
       ) : (

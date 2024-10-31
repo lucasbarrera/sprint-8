@@ -25,10 +25,10 @@ function CategoriesTable() {
       {totalPag >= 1 ? (
         <div className="pagesButtons">
           <button onClick={prevPage} disabled={pageNum == 1}>
-            anterior
+            Anterior
           </button>{" "}
           <button onClick={nextPage} disabled={pageNum == totalPag}>
-            siguiente
+            Siguiente
           </button>
         </div>
       ) : (
