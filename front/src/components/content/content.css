@@ -13,8 +13,9 @@
   background-color: #C2E2EC;
   color: black;
   text-align: center;
+  align-content: center;
 }
-.table tr{
+.table td{
   align-content: center;
 }
 .pagesButtons {
@@ -120,4 +121,92 @@
 .products td:nth-child(6) {
   width: 8%;
   text-align: center;
+}
+
+/*
+---------- TABLA CATEGORIAS ----------
+*/
+.categories {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.categories th:nth-child(1),
+.categories td:nth-child(1) {
+  width: 10%;
+}
+.categories th:nth-child(2),
+.categories td:nth-child(2) {
+  width: 90%;
+}
+
+/*
+---------- TABLA ULTIMOS PRODUCTOS ----------
+*/
+.last-products {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.last-products th:nth-child(1),
+.last-products td:nth-child(1) {
+  width: 8%;
+}
+.last-products th:nth-child(2),
+.last-products td:nth-child(2) {
+  width: 30%;
+}
+.last-products th:nth-child(3),
+.last-products td:nth-child(3) {
+  width: 50%;
+}
+.last-products th:nth-child(4),
+.last-products td:nth-child(4) {
+  width: 15%;
+}
+.last-products th:nth-child(5),
+.last-products td:nth-child(5) {
+  width: 8%;
+  text-align: center;
+}
+.last-products th:nth-child(6),
+.last-products td:nth-child(6) {
+  width: 8%;
+  text-align: center;
+}
+.last-products th:nth-child(7),
+.last-products td:nth-child(7) {
+  width: 8%;
+  text-align: center;
+}
+
+/*
+---------- TABLA ULTIMOS CLIENTES ----------
+*/
+.last-users {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.last-users th:nth-child(1),
+.last-users td:nth-child(1) {
+  width: 7%;
+}
+.last-users th:nth-child(2),
+.last-users td:nth-child(2) {
+  width: 31%;
+}
+.last-users th:nth-child(3),
+.last-users td:nth-child(3) {
+  width: 31%;
+}
+.last-users th:nth-child(4),
+.last-users td:nth-child(4) {
+  width: 31%;
 }

@@ -6,7 +6,7 @@ function CategoriesTable() {
 
   return (
     <div>
-      <table className="table">
+      <table className="table categories">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -25,10 +25,10 @@ function CategoriesTable() {
       </table>
       <div className="pagesButtons">
         <button onClick={prevPage} disabled={pageNum == 1}>
-          anterior
+          Anterior
         </button>{" "}
         <button onClick={nextPage} disabled={pageNum == totalPag}>
-          siguiente
+          Siguiente
         </button>
       </div>
       {totalPag >= 1 ? (
