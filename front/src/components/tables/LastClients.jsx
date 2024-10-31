@@ -5,13 +5,13 @@ function LastClients() {
     UseFetch("users/lastclients");
   return (
     <>
-      <table className="table">
+      <table className="table last-users">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">nombre</th>
-            <th scope="col">apellido</th>
-            <th scope="col">email</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">E-mail</th>
           </tr>
         </thead>
         <tbody>
@@ -28,10 +28,10 @@ function LastClients() {
       </table>
       <div className="pagesButtons">
         <button onClick={prevPage} disabled={pageNum == 1}>
-          anterior
+          Anterior
         </button>{" "}
         <button onClick={nextPage} disabled={pageNum == totalPag}>
-          siguiente
+          Siguiente
         </button>
       </div>
     </>

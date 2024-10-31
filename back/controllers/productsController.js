@@ -27,12 +27,12 @@ const productsController = {
       include: [
         {
           model: db.Talle,
-          attributes: ["descripcion"],
+          atributes: ["descripcion"],
           as: "talle",
         },
         {
           model: db.Marca,
-          attributes: ["descripcion"],
+          atributes: ["descripcion"],
           as: "marca",
         },
       ],

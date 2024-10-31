@@ -1,18 +1,212 @@
-.contentContainer {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid green;
-  margin: 10px;
-  padding: 10px;
+/*
+---------- ESTILO GLOBAL DE LAS TABLAS ----------
+*/
+.table-content {
+  background-color: #f9f9f9;
 }
-.content {
-  display: flex;
-  flex-direction: column;
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 7px;
+}
+.table th {
+  background-color: #C2E2EC;
+  color: black;
+  text-align: center;
+  align-content: center;
+}
+.table td{
+  align-content: center;
 }
 .pagesButtons {
-  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content:space-evenly;
+  
+}
+.pagesButtons button {
+  padding: 10px 30px;
+  background-color: #C2E2EC;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagesButtons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: dimgray;
+  border: none;
 }
 
-.table {
-  width: 100%;
+/*
+---------- TABLA MARCAS ----------
+*/
+.brands {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.brands th:nth-child(1),
+.brands td:nth-child(1) {
+  width: 10%;
+}
+.brands th:nth-child(2),
+.brands td:nth-child(2) {
+  width: 90%;
+  text-align: center;
+}
+
+/*
+---------- TABLA CLIENTES ----------
+*/
+.user {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.user th:nth-child(1),
+.user td:nth-child(1) {
+  width: 7%;
+}
+.user th:nth-child(2),
+.user td:nth-child(2) {
+  width: 31%;
+}
+.user th:nth-child(3),
+.user td:nth-child(3) {
+  width: 31%;
+}
+.user th:nth-child(4),
+.user td:nth-child(4) {
+  width: 31%;
+}
+
+/*
+---------- TABLA PRODUCTOS ----------
+*/
+.products {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.products th:nth-child(1),
+.products td:nth-child(1) {
+  width: 8%;
+}
+.products th:nth-child(2),
+.products td:nth-child(2) {
+  width: 30%;
+}
+.products th:nth-child(3),
+.products td:nth-child(3) {
+  width: 50%;
+}
+.products th:nth-child(4),
+.products td:nth-child(4) {
+  width: 15%;
+}
+.products th:nth-child(5),
+.products td:nth-child(5) {
+  width: 8%;
+  text-align: center;
+}
+.products th:nth-child(6),
+.products td:nth-child(6) {
+  width: 8%;
+  text-align: center;
+}
+
+/*
+---------- TABLA CATEGORIAS ----------
+*/
+.categories {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.categories th:nth-child(1),
+.categories td:nth-child(1) {
+  width: 10%;
+}
+.categories th:nth-child(2),
+.categories td:nth-child(2) {
+  width: 90%;
+}
+
+/*
+---------- TABLA ULTIMOS PRODUCTOS ----------
+*/
+.last-products {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.last-products th:nth-child(1),
+.last-products td:nth-child(1) {
+  width: 8%;
+}
+.last-products th:nth-child(2),
+.last-products td:nth-child(2) {
+  width: 30%;
+}
+.last-products th:nth-child(3),
+.last-products td:nth-child(3) {
+  width: 50%;
+}
+.last-products th:nth-child(4),
+.last-products td:nth-child(4) {
+  width: 15%;
+}
+.last-products th:nth-child(5),
+.last-products td:nth-child(5) {
+  width: 8%;
+  text-align: center;
+}
+.last-products th:nth-child(6),
+.last-products td:nth-child(6) {
+  width: 8%;
+  text-align: center;
+}
+.last-products th:nth-child(7),
+.last-products td:nth-child(7) {
+  width: 8%;
+  text-align: center;
+}
+
+/*
+---------- TABLA ULTIMOS CLIENTES ----------
+*/
+.last-users {
+  width: -webkit-fill-available;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 30px;
+  height: 240px;
+}
+.last-users th:nth-child(1),
+.last-users td:nth-child(1) {
+  width: 7%;
+}
+.last-users th:nth-child(2),
+.last-users td:nth-child(2) {
+  width: 31%;
+}
+.last-users th:nth-child(3),
+.last-users td:nth-child(3) {
+  width: 31%;
+}
+.last-users th:nth-child(4),
+.last-users td:nth-child(4) {
+  width: 31%;
 }

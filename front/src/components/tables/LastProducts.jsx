@@ -5,16 +5,16 @@ function LastProducts() {
     UseFetch("productos/lastadd");
   return (
     <>
-      <table className="table">
+      <table className="table last-products">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">nombre</th>
-            <th scope="col">descripcion</th>
-            <th scope="col">color</th>
-            <th scope="col">precio</th>
-            <th scope="col">talle</th>
-            <th scope="col">marca</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Color</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Talle</th>
+            <th scope="col">Marca</th>
           </tr>
         </thead>
         <tbody>
@@ -34,10 +34,10 @@ function LastProducts() {
       </table>
       <div className="pagesButtons">
         <button onClick={prevPage} disabled={pageNum == 1}>
-          anterior
+          Anterior
         </button>{" "}
         <button onClick={nextPage} disabled={pageNum == totalPag}>
-          siguiente
+          Siguiente
         </button>
       </div>
     </>

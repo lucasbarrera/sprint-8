@@ -2,21 +2,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 10dvh;
-  background-color: #e6f79b;
-  padding: 20px;
+  height: 5%;
+  background-color: #4878D9;
 }
 .logo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 10px;
+  width: 30%;
   img {
-    width: 80px;
+    width: 20%;
   }
-}
-.titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

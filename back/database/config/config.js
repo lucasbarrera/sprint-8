@@ -9,14 +9,14 @@ module.exports = {
   test: {
     username: "root",
     password: "",
-    database: "golazo",
+    database: "gooolstore",
     host: "127.0.0.1",
     dialect: "mysql",
   },
   production: {
     username: "root",
     password: "",
-    database: "golazo",
+    database: "gooolstore",
     host: "127.0.0.1",
     dialect: "mysql",
   },
