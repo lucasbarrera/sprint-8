@@ -1,8 +1,9 @@
-import { UseFetch } from "../../hooks/UseFetchUsers";
+import { UseFetch } from "../../hooks/UseFetch";
 
 function CategoriesTable() {
   const { data, nextPage, prevPage, totalPag, pageNum } =
     UseFetch("categorias/");
+
   return (
     <div>
       <table className="table">
@@ -14,14 +15,22 @@ function CategoriesTable() {
         </thead>
         <tbody>
           {data &&
-            data.cat.map((cat) => (
+            data.categorias.map((cat) => (
               <tr key={cat.id}>
                 <th scope="row">{cat.id}</th>
-                <td>{cat.descripcion}</td>
+                <td>{cat.categoria}</td>
               </tr>
             ))}
         </tbody>
       </table>
+      <div className="pagesButtons">
+        <button onClick={prevPage} disabled={pageNum == 1}>
+          anterior
+        </button>{" "}
+        <button onClick={nextPage} disabled={pageNum == totalPag}>
+          siguiente
+        </button>
+      </div>
       {totalPag >= 1 ? (
         <div className="pagesButtons">
           <button onClick={prevPage} disabled={pageNum == 1}>

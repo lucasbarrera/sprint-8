@@ -1,7 +1,8 @@
 import { UseFetch } from "../../hooks/UseFetch";
 
 function ProductsTable() {
-  const { data, nextPage, prevPage, totalPag, pageNum } = UseFetch("products/");
+  const { data, nextPage, prevPage, totalPag, pageNum } =
+    UseFetch("productos/");
 
   return (
     <div>

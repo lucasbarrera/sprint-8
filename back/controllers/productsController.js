@@ -1,11 +1,5 @@
 const db = require("../database/models");
 const productsController = {
-  showDetails: (req, res) => {
-    db.Producto.findbyPk(req.param).then((producto) => {
-      return res.render("products/details-product", { producto, usuario });
-    });
-  },
-
   showAll: async (req, res) => {
     let { page = 1, limit = 5 } = req.query;
     page = parseInt(page);
@@ -33,12 +27,12 @@ const productsController = {
       include: [
         {
           model: db.Talle,
-          atributes: ["descripcion"],
+          attributes: ["descripcion"],
           as: "talle",
         },
         {
           model: db.Marca,
-          atributes: ["descripcion"],
+          attributes: ["descripcion"],
           as: "marca",
         },
       ],
@@ -46,6 +40,34 @@ const productsController = {
       return res.json(producto);
     });
   },
-  showBrand: async (req, res) => {},
+  showLastAdd: (req, res) => {
+    let { page = 1, limit = 3 } = req.query;
+    limit = parseInt(limit);
+    page = parseInt(page);
+    const { rows: productos } = db.Producto.findAll({
+      order: [["id", "DESC"]],
+      limit: 3,
+      include: [
+        {
+          model: db.Talle,
+          attributes: ["descripcion"],
+          as: "talle",
+        },
+        {
+          model: db.Marca,
+          attributes: ["descripcion"],
+          as: "marca",
+        },
+      ],
+    })
+      .then((productos) => {
+        res.json({
+          currentPage: page,
+          totalPages: 1,
+          productos,
+        });
+      })
+      .catch((error) => console.error(error));
+  },
 };
 module.exports = productsController;

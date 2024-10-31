@@ -16,7 +16,7 @@ export const CardContainer = () => {
       .then((data) => setUsers(data.totalUsers));
   };
   const getDataProducts = () => {
-    fetch("http://localhost:8080/products")
+    fetch("http://localhost:8080/productos")
       .then((res) => res.json())
       .then((data) => setProducts(data.totalProducts));
   };

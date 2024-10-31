@@ -9,7 +9,14 @@ export const List = ({ changeNumButton }) => {
       <Button title="marcas" changeNumButton={() => changeNumButton(2)} />
       <Button title="productos" changeNumButton={() => changeNumButton(3)} />
       <Button title="categorias" changeNumButton={() => changeNumButton(4)} />
-      <Button title="mejor precio" changeNumButton={() => changeNumButton(5)} />
+      <Button
+        title="ultimos prudcto"
+        changeNumButton={() => changeNumButton(5)}
+      />
+      <Button
+        title="ultimos clientes agregado"
+        changeNumButton={() => changeNumButton(6)}
+      />
     </div>
   );
 };

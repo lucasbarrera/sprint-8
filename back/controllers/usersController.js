@@ -27,6 +27,20 @@ const usersController = {
       return res.json(usuario);
     });
   },
+  lastClients: (req, res) => {
+    db.Usuario.findAll({
+      order: [["id", "DESC"]],
+      limit: 3,
+    })
+      .then((users) => {
+        res.json({
+          users,
+          currentPage: 1,
+          totalPages: 1,
+        });
+      })
+      .catch((error) => console.error(error));
+  },
 };
 
 module.exports = usersController;
