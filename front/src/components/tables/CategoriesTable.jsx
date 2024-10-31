@@ -15,9 +15,9 @@ function CategoriesTable() {
         </thead>
         <tbody>
           {data &&
-            data.categorias.map((cat) => (
-              <tr key={cat.id}>
-                <th scope="row">{cat.id}</th>
+            data.categorias.map((cat, index) => (
+              <tr key={index}>
+                <th scope="row">{index + 1}</th>
                 <td>{cat.categoria}</td>
               </tr>
             ))}
