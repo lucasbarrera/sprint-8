@@ -9,22 +9,25 @@ export const GetData = () => {
     getDataUsers();
     getDataProducts();
     getDataCategorias();
-  }, [categorias]);
+  }, []);
 
   const getDataUsers = () => {
     fetch(`http://localhost:8080/users`)
       .then((res) => res.json())
       .then((data) => setUsers(data.totalUsers));
   };
+
   const getDataProducts = () => {
     fetch("http://localhost:8080/productos")
       .then((res) => res.json())
       .then((data) => setProducts(data.totalProducts));
   };
+
   const getDataCategorias = () => {
     fetch("http://localhost:8080/categorias")
       .then((res) => res.json())
       .then((data) => setCategorias(data.totalCategories));
   };
+
   return { users, products, categorias };
 };
