@@ -31,18 +31,6 @@ function CategoriesTable() {
           Siguiente
         </button>
       </div>
-      {totalPag >= 1 ? (
-        <div className="pagesButtons">
-          <button onClick={prevPage} disabled={pageNum == 1}>
-            Anterior
-          </button>{" "}
-          <button onClick={nextPage} disabled={pageNum == totalPag}>
-            Siguiente
-          </button>
-        </div>
-      ) : (
-        ""
-      )}
     </div>
   );
 }
