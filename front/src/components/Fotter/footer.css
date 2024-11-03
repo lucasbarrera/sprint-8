@@ -1,6 +1,15 @@
 .footer-caja {
+  background-color: #a1cbee;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 200px;
+  h6 {
+    text-align: center;
+  }
+}
+
+.github-logo {
+  height: 100px;
 }

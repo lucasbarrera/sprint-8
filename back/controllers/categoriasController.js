@@ -9,21 +9,21 @@ const categoriasController = {
       const { count, rows: categorias } = await db.Categoria.findAndCountAll({
         limit: limit,
         offset: (page - 1) * limit,
-        attributes: [
-          [Sequelize.fn("DISTINCT", Sequelize.col("categoria")), "categoria"],
-        ],
+        attributes: ["id", "categoria", "nivel", "parent_id"],
+        group: ["categoria"],
+        order: [["id", "ASC"]],
       });
 
-      const totalPages = Math.ceil(count / limit);
+      const totalPages = Math.ceil(count.length / limit);
 
       res.json({
         categorias,
         currentPage: page,
         totalPages,
-        totalCategories: count,
+        totalCategories: count.length,
       });
     } catch (error) {
-      res.status(500).json({ error: "Error al obtener las categorias" });
+      res.status(500).json({ error: error.message || "Error en el servidor" });
     }
   },
   // uniqueValues: async (req, res) => {
