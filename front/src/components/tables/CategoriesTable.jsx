@@ -11,14 +11,18 @@ function CategoriesTable() {
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
+            <th scope="col">Nivel</th>
+            <th scope="col">Parent id</th>
           </tr>
         </thead>
         <tbody>
           {data &&
-            data.categorias.map((cat, index) => (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
+            data.categorias.map((cat) => (
+              <tr key={cat.id}>
+                <th scope="row">{cat.id}</th>
                 <td>{cat.categoria}</td>
+                <td>{cat.nivel}</td>
+                <td>{cat.parent_id}</td>
               </tr>
             ))}
         </tbody>
