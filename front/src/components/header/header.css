@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   height: 5%;
   background-color: #4878D9;
+  border-bottom: 1px solid #1a1a1a;
 }
 .logo {
   display: flex;

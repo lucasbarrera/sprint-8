@@ -5,18 +5,27 @@ import { Button } from "../button/Button";
 export const List = ({ changeNumButton }) => {
   return (
     <div className="buttonContainer">
-      <Button title="clientes" changeNumButton={() => changeNumButton(1)} />
-      <Button title="marcas" changeNumButton={() => changeNumButton(2)} />
-      <Button title="productos" changeNumButton={() => changeNumButton(3)} />
-      <Button title="categorias" changeNumButton={() => changeNumButton(4)} />
+      <Button title="Clientes" changeNumButton={() => changeNumButton(1)} />
+      <Button title="Marcas" changeNumButton={() => changeNumButton(2)} />
+      <Button title="Productos" changeNumButton={() => changeNumButton(3)} />
+      <Button title="Categorias" changeNumButton={() => changeNumButton(4)} />
       <Button
-        title="ultimos prudcto"
+        title="Ultimos Prudctos"
         changeNumButton={() => changeNumButton(5)}
       />
       <Button
-        title="ultimos clientes agregado"
+        title="Ultimos Clientes"
         changeNumButton={() => changeNumButton(6)}
       />
     </div>
   );
+  
 };
+
+const buttons = document.querySelectorAll('.buttonContainer button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});

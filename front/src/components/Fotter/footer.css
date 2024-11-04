@@ -1,15 +1,25 @@
+*{
+  font-family: 'roboto';
+}
 .footer-caja {
   background-color: #a1cbee;
+  border-top: 1px solid #1a1a1a;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 200px;
-  h6 {
+  height: 180px;
+  h4 {
     text-align: center;
+    margin-top: 10px;
+  }
+  img {
+    width: inherit;
   }
 }
-
+.logo img{
+  margin: 15px;
+}
 .github-logo {
   height: 100px;
 }

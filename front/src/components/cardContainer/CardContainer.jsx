@@ -6,9 +6,9 @@ export const CardContainer = () => {
   const { products, users, categorias } = GetData();
   return (
     <div className="cardContainer">
-      <Card title="Total de Usuarios registrados" content={users} />
-      <Card title="Total de Productos en BD" content={products} />
-      <Card title="Total de categorias" content={categorias} />
+      <Card title="Usuarios Registrados" content={users} />
+      <Card title="Total Productos" content={products} />
+      <Card title="Total Categorias" content={categorias} />
     </div>
   );
 };

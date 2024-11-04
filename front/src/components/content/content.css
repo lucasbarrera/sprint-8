@@ -19,12 +19,12 @@
   align-content: center;
 }
 .pagesButtons {
-  margin-top: 10px;
   display: flex;
-  justify-content:space-evenly;
-  
+  justify-content:center;
+  margin: 50px 0px;
 }
 .pagesButtons button {
+  margin: 0px 50px;
   padding: 10px 30px;
   background-color: #C2E2EC;
   color: black;
@@ -139,7 +139,17 @@
 }
 .categories th:nth-child(2),
 .categories td:nth-child(2) {
-  width: 90%;
+  width: 30%;
+}
+.categories th:nth-child(3),
+.categories td:nth-child(3) {
+  width: 30%;
+  text-align: center;
+}
+.categories th:nth-child(4),
+.categories td:nth-child(4) {
+  width: 30%;
+  text-align: center;
 }
 
 /*

@@ -1,19 +1,21 @@
 .card {
-  width: 25%;
-  background-color: #d9eca5;
-  border: 3px solid #4d533d;
-  box-shadow: 5px 5px 10px;
-  padding: 5px;
+  width: 22%;
+  background-color: #a1cbee;
+  border: 2px solid #000a1f;
+  box-shadow: 2px 2px 2px;
+  margin: 0px 20px;
+  padding-top: 5px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
   text-align: center;
+  p{
+    margin: 0%;
+  }
 }
 .titleCard {
   font-size: 20px;
-  word-wrap: break-word;
+  color: #000000;
 }
 .contentCard {
-  font-size: 15px;
+  font-size: 26px;
+  color: #05225f;
 }
