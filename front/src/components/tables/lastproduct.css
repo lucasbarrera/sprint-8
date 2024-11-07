@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: 5px auto;
+  width: 40%;
+  margin: 20px auto;
   background-color: rgb(236, 239, 240);
   border: 2px solid darkgrey;
   border-radius: 10px;
@@ -15,5 +15,16 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 2px;
+  justify-content: center;
+  padding: 2px 70px;
+  label{
+    width: 50%;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  p{
+    margin-top: 16px;
+    width: 50%;
+    padding-left: 50px;
+  }
 }
