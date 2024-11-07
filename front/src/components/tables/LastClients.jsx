@@ -1,39 +1,50 @@
 import { UseFetch } from "../../hooks/UseFetch";
 
 function LastClients() {
-  const { data, totalPag, prevPage, nextPage, pageNum } =
-    UseFetch("users/lastclients");
+  const { data } = UseFetch("users/lastclients");
   return (
     <>
-      <table className="table last-users">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">E-mail</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data &&
-            data.users.map((user) => (
-              <tr key={user.id}>
-                <th scope="row">{user.id}</th>
-                <td>{user.nombre}</td>
-                <td>{user.apellido}</td>
-                <td>{user.email}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-      <div className="pagesButtons">
-        <button onClick={prevPage} disabled={pageNum == 1}>
-          Anterior
-        </button>{" "}
-        <button onClick={nextPage} disabled={pageNum == totalPag}>
-          Siguiente
-        </button>
-      </div>
+      {data &&
+        data.users.map((u) => (
+          <div className="contenedor-last" key={u.id}>
+            <div className="line">
+              <label htmlFor="">Id: </label>
+              <p>{u.id}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Nombre: </label>
+              <p>{u.nombre}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Apellido: </label>
+              <p>{u.apellido}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">DNI: </label>
+              <p>{u.dni}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Telefono: </label>
+              <p>{u.telefono}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Domicilio: </label>
+              <p>{u.domicilio}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Email: </label>
+              <p>{u.email}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Tipo de usuario: </label>
+              <p>{u.tipo_usuario}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Genero: </label>
+              <p>{u.genero}</p>
+            </div>
+          </div>
+        ))}
     </>
   );
 }

@@ -10,22 +10,21 @@ export const List = ({ changeNumButton }) => {
       <Button title="Productos" changeNumButton={() => changeNumButton(3)} />
       <Button title="Categorias" changeNumButton={() => changeNumButton(4)} />
       <Button
-        title="Ultimos Prudctos"
+        title="Ultimo Prudcto"
         changeNumButton={() => changeNumButton(5)}
       />
       <Button
-        title="Ultimos Clientes"
+        title="Ultimo Cliente"
         changeNumButton={() => changeNumButton(6)}
       />
     </div>
   );
-  
 };
 
-const buttons = document.querySelectorAll('.buttonContainer button');
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+const buttons = document.querySelectorAll(".buttonContainer button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
   });
 });

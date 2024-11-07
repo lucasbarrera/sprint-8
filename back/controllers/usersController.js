@@ -30,7 +30,7 @@ const usersController = {
   lastClients: (req, res) => {
     db.Usuario.findAll({
       order: [["id", "DESC"]],
-      limit: 3,
+      limit: 1,
     })
       .then((users) => {
         res.json({

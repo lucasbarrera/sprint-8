@@ -1,45 +1,43 @@
 import { UseFetch } from "../../hooks/UseFetch";
+import "./lastproduct.css";
 
 function LastProducts() {
-  const { data, prevPage, nextPage, pageNum, totalPag } =
-    UseFetch("productos/lastadd");
+  const { data } = UseFetch("productos/lastadd");
   return (
     <>
-      <table className="table last-products">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Descripcion</th>
-            <th scope="col">Color</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Talle</th>
-            <th scope="col">Marca</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data &&
-            data.productos.map((p) => (
-              <tr key={p.id}>
-                <th scope="row">{p.id}</th>
-                <td>{p.nombre}</td>
-                <td>{p.descripcion}</td>
-                <td>{p.color}</td>
-                <td>{p.precio}</td>
-                <td>{p.talle.descripcion}</td>
-                <td>{p.marca.descripcion}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-      <div className="pagesButtons">
-        <button onClick={prevPage} disabled={pageNum == 1}>
-          Anterior
-        </button>{" "}
-        <button onClick={nextPage} disabled={pageNum == totalPag}>
-          Siguiente
-        </button>
-      </div>
+      {data &&
+        data.productos.map((p) => (
+          <div className="contenedor-last" key={p.id}>
+            <div className="line">
+              <label htmlFor="">Id: </label>
+              <p>{p.id}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Nombre: </label>
+              <p>{p.nombre}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Descripcion: </label>
+              <p>{p.descripcion}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Color: </label>
+              <p>{p.color}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Precio: </label>
+              <p>{p.precio}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Talle: </label>
+              <p>{p.talle.descripcion}</p>
+            </div>
+            <div className="line">
+              <label htmlFor="">Marca: </label>
+              <p>{p.marca.descripcion}</p>
+            </div>
+          </div>
+        ))}
     </>
   );
 }

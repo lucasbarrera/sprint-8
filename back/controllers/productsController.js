@@ -41,12 +41,12 @@ const productsController = {
     });
   },
   showLastAdd: (req, res) => {
-    let { page = 1, limit = 3 } = req.query;
+    let { page = 1, limit = 1 } = req.query;
     limit = parseInt(limit);
     page = parseInt(page);
     const { rows: productos } = db.Producto.findAll({
       order: [["id", "DESC"]],
-      limit: 3,
+      limit: 1,
       include: [
         {
           model: db.Talle,

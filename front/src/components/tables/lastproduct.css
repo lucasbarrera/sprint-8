@@ -1,0 +1,19 @@
+.contenedor-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 5px auto;
+  background-color: rgb(236, 239, 240);
+  border: 2px solid darkgrey;
+  border-radius: 10px;
+}
+.line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px;
+}

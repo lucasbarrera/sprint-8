@@ -10,23 +10,23 @@
   padding: 7px;
 }
 .table th {
-  background-color: #C2E2EC;
+  background-color: #c2e2ec;
   color: black;
   text-align: center;
   align-content: center;
 }
-.table td{
+.table td {
   align-content: center;
 }
 .pagesButtons {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin: 50px 0px;
 }
 .pagesButtons button {
   margin: 0px 50px;
   padding: 10px 30px;
-  background-color: #C2E2EC;
+  background-color: #c2e2ec;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
@@ -155,7 +155,7 @@
 /*
 ---------- TABLA ULTIMOS PRODUCTOS ----------
 */
-.last-products {
+/* .last-products {
   width: -webkit-fill-available;
   table-layout: fixed;
   border-collapse: collapse;
@@ -192,12 +192,12 @@
 .last-products td:nth-child(7) {
   width: 8%;
   text-align: center;
-}
+} */
 
 /*
 ---------- TABLA ULTIMOS CLIENTES ----------
 */
-.last-users {
+/* .last-users {
   width: -webkit-fill-available;
   table-layout: fixed;
   border-collapse: collapse;
@@ -219,4 +219,4 @@
 .last-users th:nth-child(4),
 .last-users td:nth-child(4) {
   width: 31%;
-}
+} */
